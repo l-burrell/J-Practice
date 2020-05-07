@@ -1,0 +1,20 @@
+
+Notice that each data type's minimum value and maximum value can be found using 
+the wrapper class and the MIN_VALUE or MAX_VALUE function. This is useful for determining 
+which data type we want to use for saving memory.
+
+Overflowing / UnderFlowing
+--------------------------
+	- Overflow is when we try to add more data then the maximum can hold, and thus it simply displays the maximum value. 
+	
+	- Underflow is when we try to subtract or use less than the minimum value that the data type can hold. Thus only displaying the minimum value.
+	
+	- Both Overflowing and Underflowing will lose data! It is important to use proper data types for holding this data so that we dont run into these issues.
+	
+Lossy Conversions when casting
+----------------------------------
+	- You are dealing with lossy data when you store data in the incorrect data type. For example, think about when you have a double with the value 5.6 and try to store that data into an integer. 
+	
+	This would essentially put the value 5 into the integer and lose the .6 it originally had. This is lossy data. It is bad practice to lose data like this so you should always store data appropriately.
+	
+	
