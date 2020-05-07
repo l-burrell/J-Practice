@@ -3,6 +3,7 @@ Notice that each data type's minimum value and maximum value can be found using
 the wrapper class and the MIN_VALUE or MAX_VALUE function. This is useful for determining 
 which data type we want to use for saving memory.
 
+
 Overflowing / UnderFlowing
 --------------------------
 	- Overflow is when we try to add more data then the maximum can hold, and thus it simply displays the maximum value. 
@@ -11,6 +12,7 @@ Overflowing / UnderFlowing
 	
 	- Both Overflowing and Underflowing will lose data! It is important to use proper data types for holding this data so that we dont run into these issues.
 	
+	
 Lossy Conversions when casting
 ----------------------------------
 	You are dealing with lossy data when you store data in the incorrect data type. For example, think about when you have a double with the value 5.6 and try to store that data into an integer. 
@@ -18,25 +20,12 @@ Lossy Conversions when casting
 	This would essentially put the value 5 into the integer and lose the 0.6 it originally had. This is lossy data. 
 	
 	It is bad practice to lose data like this so you should always store data appropriately.
-	
-Strings
-------------------------
-1) Strings are Immutable (Meaning they cannot be changed once created! )
 
-	As beginner developers we often try to modifiy an existing string by using the addition operator or the equals operator. 
-		Ex: 
-			String name = "tim"; // creation of the string 
-			name = "tim warner"; // modify the string
-	
-	However, we are not actually modifying the string! Instead a new string is created with the data from the previous string. This gives the appearance that the string has been modified but in reality it is a totally different string.
-	
-	Obviously this is inefficient to create a new string each time we would like to append data to an exisiting string. A better approach would be to use the StringBuffer.
-	
-2) Strings are not a primitive data type. But is an example of a class being built using primitive data types, to essentially create a totally new data type.
 
 All Primitive Data Types
 -------------------------
 	byte, short, int, long, float, double, char, booleans
+
 
 Try to do
 ----------------
@@ -56,6 +45,7 @@ Tips
 		1) casting with (double)
 		2) appending D to the value
 		3) appending .00 to the end of the value
+		
 		
 Final Note
 ----------------
