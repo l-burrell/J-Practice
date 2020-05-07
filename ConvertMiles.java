@@ -10,8 +10,12 @@ public class ConvertMiles {
 		long miles = -1;
 		if(kilometersPerHour >= 0) {
 			miles = Math.round(kilometersPerHour * 0.62137);
-			System.out.println(kilometersPerHour + " Kilometers was equal to about " + miles + " miles.");
+			printConversion(kilometersPerHour, miles);
 		}
 		return miles;
+	}
+	
+	public static void printConversion(double kilometersPerHour, long miles) {
+		System.out.println(kilometersPerHour + " km/h was equal to about " + miles + " mph.");		
 	}
 }
