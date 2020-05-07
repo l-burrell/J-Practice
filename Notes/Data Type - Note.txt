@@ -19,4 +19,46 @@ Lossy Conversions when casting
 	
 	It is bad practice to lose data like this so you should always store data appropriately.
 	
+Strings
+------------------------
+1) Strings are Immutable (Meaning they cannot be changed once created! )
+
+	As beginner developers we often try to modifiy an existing string by using the addition operator or the equals operator. 
+		Ex: 
+			String name = "tim"; // creation of the string 
+			name = "tim warner"; // modify the string
 	
+	However, we are not actually modifying the string! Instead a new string is created with the data from the previous string. This gives the appearance that the string has been modified but in reality it is a totally different string.
+	
+	Obviously this is inefficient to create a new string each time we would like to append data to an exisiting string. A better approach would be to use the StringBuffer.
+	
+2) Strings are not a primitive data type. But is an example of a class being built using primitive data types, to essentially create a totally new data type.
+
+All Primitive Data Types
+-------------------------
+	byte, short, int, long, float, double, char, booleans
+
+Try to do
+----------------
+	- Try to use L at the end of your long values to denote that it is a LONG value.
+	- Try to use F at the end of your float values.
+	- Try to use D at the end of your double values.
+	- Try to use casting to force a conversion of data type when needed.
+	- Try to make numbers easy to read for other developers with the _ character.
+
+	
+Tips
+----------------
+	- You are able to create custom datatype using classes!
+	- Remember: Chars can use unicode with the \uCODE inside the char.
+	- Remember: Double is more precise than a float, thus is preferred.
+	- Double can be achieved with either:
+		1) casting with (double)
+		2) appending D to the value
+		3) appending .00 to the end of the value
+		
+Final Note
+----------------
+	Both double and floats are great for general floating point calculations, BUT do not use them for precise calculations! Such situations when not to use decimals or floats would be when dealing with Currency / Calculating money.
+	
+	Use the BigDecimal class instead.
