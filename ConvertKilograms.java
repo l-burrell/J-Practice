@@ -4,7 +4,6 @@ public class ConvertKilograms {
 
 	public static void main(String[] args) {
 		double numOfPounds = 200D;
-		
 		System.out.println("Pounds to Kilogram: " + poundsToKilogram(numOfPounds));
 		System.out.println("Kilogram to Pounds" + kilogramToPound(150));
 	}
