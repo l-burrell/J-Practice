@@ -13,8 +13,10 @@ Overflowing / UnderFlowing
 	
 Lossy Conversions when casting
 ----------------------------------
-	- You are dealing with lossy data when you store data in the incorrect data type. For example, think about when you have a double with the value 5.6 and try to store that data into an integer. 
+	You are dealing with lossy data when you store data in the incorrect data type. For example, think about when you have a double with the value 5.6 and try to store that data into an integer. 
 	
-	This would essentially put the value 5 into the integer and lose the .6 it originally had. This is lossy data. It is bad practice to lose data like this so you should always store data appropriately.
+	This would essentially put the value 5 into the integer and lose the 0.6 it originally had. This is lossy data. 
+	
+	It is bad practice to lose data like this so you should always store data appropriately.
 	
 	
