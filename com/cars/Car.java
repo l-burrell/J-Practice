@@ -11,4 +11,17 @@ public class Car {
 	public Car() {
 		 
 	}
+	
+	public void setModel(String model) {
+		String validModel = model.toLowerCase();
+		if (validModel.equals("toyota") || validModel.equals("porsche")) {			
+			this.model = model;
+		} else {
+			this.model = "unknown";
+		}
+	}
+	
+	public String getModel() {
+		return this.model;
+	}
 }

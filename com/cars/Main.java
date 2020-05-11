@@ -3,12 +3,14 @@ package com.cars;
 public class Main {
 
 	public static void main(String[] args) {
-		Car porche = new Car();
+		Car porsche = new Car();
 		Car toyota = new Car();
-		testDefaults();
+		porsche.setModel("porsche");
+		System.out.println("Model is " + porsche.getModel());
 	}
 	
 	public static void testDefaults() {
+		//check what default values are for array members.
 		int num = 3;
 		int[] arrOne = new int[num];
 		String[] arrTwo = new String[num];
