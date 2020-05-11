@@ -36,8 +36,9 @@ public class Account {
 		if(amount < 0) {
 			System.out.println("[Invalid deposit]: Unable to deposit $" + amount + ".");
 		} else {
+			balance += amount;
 			System.out.println("[Successful deposit]: You have added $" + amount + " to your account.");
-			System.out.println("New Balance: $" + balance);
+			System.out.println("New Balance: $" + balance + "\n");
 		}
 	}
 	
@@ -48,7 +49,7 @@ public class Account {
 		} else {
 			balance -= amount;
 			System.out.println("[Successful withdrawl]: You have collected $" + amount + " from your account.");
-			System.out.println("New Balance: $" + balance);
+			System.out.println("New Balance: $" + balance + "\n");
 		}
 	}
 	
