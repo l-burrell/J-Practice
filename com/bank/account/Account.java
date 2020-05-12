@@ -10,7 +10,9 @@ public class Account {
 	private int phoneNumber;
 	private double balance;
 	
-	public Account() { }
+	public Account() { 
+		this("John", "Doe");
+	}
 	
 	public Account(String firstName, String lastName) {
 		this(firstName, lastName, "n/a");
