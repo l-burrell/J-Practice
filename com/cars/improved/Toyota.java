@@ -39,6 +39,10 @@ public class Toyota extends Car {
 		return price;
 	}
 	
+	public double getPrice() {
+		return price;
+	}
+	
 	public String getColor() {
 		return color;
 	}

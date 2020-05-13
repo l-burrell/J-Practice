@@ -60,11 +60,11 @@ public class Car extends Vehicle {
 		else {
 			
 			if(speed < currentSpeed && speed > 0) {
-				System.out.println("You decelerate and slow down. You are travelling at " + currentSpeed + " mph.");
+				System.out.println("You decelerate and slow down. You are travelling at " + speed + " mph.");
 			} else if(speed == currentSpeed) {
-				System.out.println("You remain at the same speed. You are currently traveling at " + currentSpeed + " mph.");
+				System.out.println("You remain at the same speed. You are currently traveling at " + speed + " mph.");
 			} else {
-				System.out.println("You accelerate even faster! You are moving at " + currentSpeed + " mph.");
+				System.out.println("You accelerate even faster! You are moving at " + speed + " mph.");
 			}
 			currentSpeed = speed;
 		}
