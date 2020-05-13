@@ -11,8 +11,30 @@ public class Toyota extends Car {
 	
 	
 	public Toyota() {
-		super("Toyota");
+		this("Toyota Dealership");
 	}
+	
+	public Toyota(String owner) {
+		this.owner = owner;
+	}
+		
+	public Toyota(String owner, String color) {
+		this(owner, color, false, false, true);
+	}
+	
+	public Toyota(String owner, String color, boolean isLuxuryVehicle) {
+		this(owner, color, isLuxuryVehicle, false, true);
+	}
+	
+	public Toyota(String owner, String color, boolean isLuxuryVehicle, boolean isDamaged, boolean isMaintained) {
+		super("Toyota");
+		this.owner = owner;
+		this.color = color;
+		this.isLuxuryVehicle = isLuxuryVehicle;
+		this.isDamaged = isDamaged;
+		this.isMaintained = isMaintained;
+	}
+	
 	
 	public void checkCondition() {
 		if(isDamaged && !isMaintained) {
