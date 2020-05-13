@@ -15,7 +15,7 @@ public class Toyota extends Car {
 	}
 	
 	public void checkCondition() {
-		if(isDamaged && isMaintained) {
+		if(isDamaged && !isMaintained) {
 			System.out.println("Bad Condition: Has been damaged, and was not maintained.");
 		} else if(isDamaged && isMaintained) {
 			System.out.println("Okay Condition: Has been damaged, but well maintained. ");
