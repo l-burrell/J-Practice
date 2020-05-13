@@ -6,7 +6,7 @@ public class Vehicle {
 	private int gears;
 	
 	public Vehicle() {
-		this(0, "n/a");
+		this(4, "n/a");
 	}
 	
 	public Vehicle(int gears, String steering) {
