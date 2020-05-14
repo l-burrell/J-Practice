@@ -6,12 +6,14 @@ public class Descending {
 
 	public static void main(String[] args) {
 		//decending means highest to lowest
-		int[] num = {131, 52, 422, 13, 31 ,4, 41};
+		int[] num = {131, 52, 422, 13, 31, 4, 41};
 		
 		System.out.println("Please enter 3 integers: ");
 		int[] ordered = decendingOrder(getUserArray(3));
 		System.out.println("The array in decending order is: ");
 		printArray(ordered);
+		
+		System.out.println("The min value was: " + findMin(num));
 	}
 	
 	public static void printArray(int[] array) {
@@ -40,5 +42,15 @@ public class Descending {
 			array[i] = scan.nextInt();
 		}
 		return array;
+	}
+	
+	public static int findMin(int[] array) {
+		int min = Integer.MAX_VALUE;
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] < min) {
+				min = array[i];
+			}
+		}
+		return min;
 	}
 }
