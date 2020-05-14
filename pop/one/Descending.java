@@ -14,6 +14,7 @@ public class Descending {
 		printArray(ordered);
 		
 		System.out.println("The min value was: " + findMin(num));
+		reverse(num);
 	}
 	
 	public static void printArray(int[] array) {
@@ -52,5 +53,12 @@ public class Descending {
 			}
 		}
 		return min;
+	}
+	
+	public static void reverse(int[] array) {
+		System.out.println("The array in reverse is: ");
+		for(int i = array.length-1; i >= 0; i--) {
+			System.out.print(array[i] + ", ");
+		}
 	}
 }
