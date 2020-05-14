@@ -13,6 +13,8 @@ public class GroceryList {
 		addItem("Tomato");
 		removeItem(2);
 		printList();
+		modifyItem(0, "Butter");
+		printList();
 	}
 	
 	public static void addItem(String item) {
@@ -24,6 +26,12 @@ public class GroceryList {
 		String item = groceryList.get(itemPosition);
 		System.out.println("You are removing item: " + item);
 		groceryList.remove(itemPosition);
+	}
+	
+	public static void modifyItem(int position, String newItem) {
+		System.out.println("You exchange " + groceryList.get(position) + " for " + newItem);
+		groceryList.set(position, newItem);
+		
 	}
 	
 	public static void printList() {
@@ -39,5 +47,15 @@ public class GroceryList {
 		for(int i = 0; i < groceryList.size(); i++) {
 			System.out.println(groceryList.get(i));
 		}
+	}
+	
+	public static String FindItem(String searchItem) {
+		boolean exists = groceryList.contains(searchItem);
+		int itemPosition = 0;
+		if(exists) {
+			itemPosition = groceryList.indexOf(searchItem);
+			return groceryList.get(itemPosition);
+		}
+		return null;
 	}
 }
