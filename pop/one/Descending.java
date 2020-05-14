@@ -7,6 +7,7 @@ public class Descending {
 	public static void main(String[] args) {
 		//decending means highest to lowest
 		int[] num = {131, 52, 422, 13, 31, 4, 41};
+		int[] num2 = {5, 64, 2, 53, 431, 3};
 		
 		System.out.println("Please enter 3 integers: ");
 		int[] ordered = decendingOrder(getUserArray(3));
@@ -14,7 +15,9 @@ public class Descending {
 		printArray(ordered);
 		
 		System.out.println("The min value was: " + findMin(num));
-		reverse(num);
+		reverseNoChange(num);
+		reverseWithChange(num);
+		reverseWithChange(num2);
 	}
 	
 	public static void printArray(int[] array) {
@@ -55,10 +58,24 @@ public class Descending {
 		return min;
 	}
 	
-	public static void reverse(int[] array) {
+	public static void reverseNoChange(int[] array) {
 		System.out.println("The array in reverse is: ");
 		for(int i = array.length-1; i >= 0; i--) {
 			System.out.print(array[i] + ", ");
+		}
+	}
+	
+	public static void reverseWithChange(int[] array) {
+		//this method will change the actual array.
+		System.out.println("\n");
+		int mid = (int)Math.floor(array.length / 2);
+		for(int i = 0; i < mid; i++) {
+			int temp = array[i];
+			array[i] = array[array.length-i-1];
+			array[array.length-i-1] = temp;
+		}
+		for(int num : array) {
+			System.out.print(num + ", ");
 		}
 	}
 }
