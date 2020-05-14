@@ -17,7 +17,11 @@ public class Printer {
 	}
 	
 	public Printer(int tonerLevel, int numOfPages, boolean isDuplex) {
-		this.tonerLevel = tonerLevel;
+		if(tonerLevel > -1 && tonerLevel <= 100) {
+			this.tonerLevel = tonerLevel;			
+		} else {
+			this.tonerLevel = 0;
+		}
 		this.numOfPages = numOfPages;
 		this.isDuplex = isDuplex;
 	}
@@ -43,10 +47,17 @@ public class Printer {
 		System.out.println("You have " + getTonerLevel() + "% toner left before its next required refill.");
 	}
 	
+	public void print() {
+		if(numOfPages > 0 ) {
+			print(numOfPages);
+		}
+	}
+	
 	public void print(int pages) {
 		if(isDuplex && tonerLevel > 0) {
+			int duplex = ((pages / 2) + (pages % 2));
 			System.out.println("NOTE: [You print on the front and back of the page.]");
-			System.out.println("Because you have a duplex, the total pages prints went from " + pages + " pages to " + (pages / 2));
+			System.out.println("Because you have a duplex, the total pages prints went from " + pages + " pages to " + duplex);
 		} else if(tonerLevel > 0) {
 			System.out.println("NOTE: [You print only on the front of the page.]");
 			System.out.println("You printed a total of " + pages + " pages.");
