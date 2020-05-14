@@ -19,8 +19,6 @@ public class Arrays {
 		printArray(anotherArr);
 		
 		printArray(getInput(4));
-		
-		
 	}
 	
 	public static void printArray(int[] array) {
@@ -51,5 +49,15 @@ public class Arrays {
 			sum += array[i];
 		}
 		return sum;
+	}
+	
+	public static void resizeArray(int[] array, int size) {
+		int[] newArray = array;
+		array = new int[size];
+		if(array.length < size) {		
+			for(int i = 0; i < array.length; i++) {
+				newArray[i] = array[i];
+			}
+		}
 	}
 }
