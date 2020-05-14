@@ -8,14 +8,6 @@ public class GroceryList {
 	static ArrayList<String> groceryList = new ArrayList<String>();
 	
 	public static void main(String[] args) {
-//		addItem("Milk");
-//		addItem("Bread");
-//		addItem("Lettuce");
-//		addItem("Tomato");
-//		removeItem(2);
-//		printList();
-//		modifyItem(0, "Butter");
-//		printList();
 		boolean isRunning = true;
 		Scanner scan = new Scanner(System.in);
 		String item;
