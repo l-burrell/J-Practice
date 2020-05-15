@@ -47,6 +47,9 @@ public class Burger {
 		if(hasCheese) {
 			price = price + 0.20;
 		}
+		if(meat.equals("Grilled Chicken")) {
+			price = price + 1.35;
+		}
 		System.out.println("The price of your burger is $" + price + " dollars.");
 		return price;
 	}

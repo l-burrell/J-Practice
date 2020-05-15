@@ -20,7 +20,6 @@ public class GroceryList {
 			System.out.println("4 = Print Grocery List");
 			System.out.println("5 = Exit Application");
 			select = scan.nextInt();
-//			System.out.println("Loading updated shopping list\n~~~~~~~~~~~~~~~~~~");
 			switch(select) {
 			case 1:
 				System.out.println("What would you like to add?");
