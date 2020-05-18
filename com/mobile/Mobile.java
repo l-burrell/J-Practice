@@ -9,9 +9,15 @@ import java.util.List;
 public class Mobile {
 	
 	private ArrayList<Contact> contacts;
+	private int myNumber;
 	
 	public Mobile() {
+		this(0);
+	}
+	
+	public Mobile(int myNumber) {
 		contacts = new ArrayList<Contact>();
+		this.myNumber = myNumber;
 	}
 		
 	public void addContact() {
@@ -29,8 +35,7 @@ public class Mobile {
 	}
 	
 	public void removeContact(String name) {
-//		int id = findID(name);
-//		contacts.remove(id);
+		
 	}
 	
 	public void listContacts() {
@@ -51,15 +56,28 @@ public class Mobile {
 		return name;
 	}
 	
-	//WORK IN PROGRESS - MUST FIND A WAY TO ACCESS STRING FROM IN THE OBJECT
-//	private int findID(String name) {
-//		int id = -1;
-//		if(contacts.contains(name)) {
-//			id = contacts.indexOf(name);
-//			return id;
-//		}
-//		return id;
-//	}
+	public boolean updateContact(Contact oldContact, Contact newContact) {
+		int findID = findContact(oldContact);
+		if(findID < 0) {
+			System.out.println(oldContact.getName() + " not found.");
+			return false;
+		} 
+		this.contacts.set(findID, newContact);
+		System.out.println(oldContact.getName() + " was replaced with " + newContact);
+		return true;
+	}
 
+	private int findContact(Contact contact) {
+		return this.contacts.indexOf(contact);
+	}
 	
+	private int findContact(String contactName) {
+		for(int i = 0; i < this.contacts.size(); i++) {
+			Contact contact = this.contacts.get(i);
+			if(contact.getName().equalsIgnoreCase(contactName)) {
+				return i;
+			}
+		}
+		return -1;
+	}
 }

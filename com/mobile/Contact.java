@@ -41,4 +41,8 @@ public class Contact {
 	public int getWorkPhoneNumber() {
 		return workPhoneNumber;
 	}
+	
+	public static Contact createContact(String name, int cellPhoneNumber) {
+		return new Contact(name, cellPhoneNumber);
+	}
 }
