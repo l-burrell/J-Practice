@@ -31,11 +31,22 @@ public class Mobile {
 	}
 	
 	public void removeContact() {
-		removeContact(findName());
+		String name = findName();
+		int contactId = findContact(name);
+		if(contactId >= 0) {
+			this.contacts.remove(contactId);
+		}
 	}
 	
-	public void removeContact(String name) {
-		
+	public boolean removeContact(Contact contact) {
+		int foundPosition = findContact(contact);
+		if(foundPosition < 0) {
+			System.out.println(contact.getName() + " was not found.");
+			return false;
+		}
+		this.contacts.remove(foundPosition);
+		System.out.println(contact.getName() + " was deleted");
+		return true;
 	}
 	
 	public void listContacts() {
@@ -79,5 +90,20 @@ public class Mobile {
 			}
 		}
 		return -1;
+	}
+	
+	private String queryContact(Contact contact) {
+		if(findContact(contact) >= 0) {
+			return contact.getName();
+		}
+		return null;
+	}
+	
+	private Contact queryContact(String name) {
+		int position = findContact(name);
+		if(position >= 0) {
+			return this.contacts.get(position);
+		}
+		return null;
 	}
 }
